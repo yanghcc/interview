@@ -1,6 +1,6 @@
 javaScript interview Q&A:
 
-1. ```javascript
+```javascript
    	//匿名函数
    	(function(){
          var arr = ['a','ad','dd'];
@@ -22,10 +22,10 @@ javaScript interview Q&A:
        }
        console.log([].reSort());
        console.log(['a','ad','dd'].reSort());
-   ```
+```
 
 
-2. ```javascript
+```javascript
     var fullname = 'John Doe'
        var obj = {
            fullname: 'Colin Ihrig',
@@ -40,7 +40,7 @@ javaScript interview Q&A:
    ```
 
 
-3. ```javascript
+```javascript
     	//原型法	
    	String.prototype.repeatify=function(n){
    		if ((typeof n) === 'number'){
@@ -59,11 +59,11 @@ javaScript interview Q&A:
    		}
    	}
    	console.log('hello'.repeatify(3))
-   ```
+```
 
-4. ```javascript
+```javascript
    //方法一:
    Object.keys(String(Array(101)));
    //方法二:
    new Array(101).join('a').replace(/a/g, function(v, i){return i+',';}).split(',').splice(0, 100);
-   ```
+```
