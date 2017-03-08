@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>show 36kr.com data</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/javascript">
+		window.addEventListener('resize', infinite);
+		function infinite() {
+		    const html = document.getElementsByTagName('html')[0];
+		    const htmlWidth = document.body.clientWidth
+		    if (htmlWidth >= 1080) {
+		        html.style.fontSize = "42px";
+		    } else {
+		        html.style.fontSize = (42/ 1080 * htmlWidth) + 'px';
+		    }
+		}infinite();
+  </script>
+    <script src="src/assets/xml2json.min.js"></script>
+    <script src="./dist/build.js"></script>
+  </body>
+</html>
