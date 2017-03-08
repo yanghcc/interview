@@ -1,4 +1,17 @@
-javaScript interview Q&A:
+### 使用项目将项目下载到本地，执行 npm install 命令安装插件和依赖
+```
+npm install
+```
+然后执行npm run dev命令，将项目跑起来，默认运行在8080端口
+```
+npm run dev
+```
+打包生产环境版本
+```
+npm run build
+```
+
+###javaScript interview Q&A:
 
 ```javascript
    	//匿名函数
