@@ -1,6 +1,21 @@
-javaScript interview Q&A:
 
-1. ```javascript
+###[试题链接](https://github.com/fuliaoyi/showmecode)
+### 使用项目将项目下载到本地，执行 npm install 命令安装插件和依赖
+```
+npm install
+```
+然后执行npm run dev命令，将项目跑起来，默认运行在8080端口
+```
+npm run dev
+```
+打包生产环境版本
+```
+npm run build
+```
+
+###javaScript interview Q&A:
+
+```javascript
    	//匿名函数
    	(function(){
          var arr = ['a','ad','dd'];
@@ -22,10 +37,10 @@ javaScript interview Q&A:
        }
        console.log([].reSort());
        console.log(['a','ad','dd'].reSort());
-   ```
+```
 
 
-2. ```javascript
+```javascript
     var fullname = 'John Doe'
        var obj = {
            fullname: 'Colin Ihrig',
@@ -40,7 +55,7 @@ javaScript interview Q&A:
    ```
 
 
-3. ```javascript
+```javascript
     	//原型法	
    	String.prototype.repeatify=function(n){
    		if ((typeof n) === 'number'){
@@ -59,11 +74,11 @@ javaScript interview Q&A:
    		}
    	}
    	console.log('hello'.repeatify(3))
-   ```
+```
 
-4. ```javascript
+```javascript
    //方法一:
    Object.keys(String(Array(101)));
    //方法二:
    new Array(101).join('a').replace(/a/g, function(v, i){return i+',';}).split(',').splice(0, 100);
-   ```
+```
