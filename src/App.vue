@@ -116,9 +116,10 @@
     position: relative;
     float: right;
     margin-top: .9rem;
+    overflow: hidden;
   }
   .imgbox .img{
-    width: 100%;
+    /*width: 100%;*/
     height: 100%;
     position: absolute;
     top: 0;
@@ -142,7 +143,7 @@
         allData: [],
         dataLen: 0,
         step: 10,
-        times: 1,
+        times: 0,
         skewImg: []
       }
     },
@@ -158,10 +159,10 @@
           for (var i = itemData.length; i >= 0; i--) {
             self.allData.push(itemData[i])
           }
-          var end = ((self.step)+1)*self.times;
-          var sta  = end - self.step;
           self.dataLen = self.allData.length;
-          self.items = self.allData.slice(sta,end);
+          // var end = ((self.step)+1)*self.times;
+          // var sta  = end - self.step;
+          // self.items = self.allData.slice(sta,end);
         })
         .catch(function (error) {
           console.log(error);
@@ -194,15 +195,13 @@
       },
       infinite() {
         var self = this;
-        if (this.bottom >= 30) {
-          setTimeout(() => {
-            this.$refs.my_scroller.finishInfinite(true)
-          }, 1500)
-          return;
-        }
+        // if (this.bottom >= 30) {
+        //   setTimeout(() => {
+        //     this.$refs.my_scroller.finishInfinite(true)
+        //   }, 1500)
+        //   return;
+        // }
         setTimeout(() => {
-          // let start = this.bottom + 1;
-          // this.bottom = this.bottom + 10;
           self.times +=1;
           var end = ((self.step)+1)*self.times;
           var sta  = end - self.step;
