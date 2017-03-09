@@ -161,9 +161,6 @@
             self.allData.push(itemData[i])
           }
           self.dataLen = self.allData.length;
-          // var end = ((self.step)+1)*self.times;
-          // var sta  = end - self.step;
-          // self.items = self.allData.slice(sta,end);
         })
         .catch(function (error) {
           console.log(error);
@@ -180,9 +177,13 @@
           var dataObj = response.data;
           var jsonObj = x2js.xml_str2json( dataObj );
           var itemData = jsonObj.rss.channel.item;
+          self.items = [];//重置数据
+          self.allData = [];//重置数据
+          self.times = 1;//重置数据
           for (var i = itemData.length; i >= 0; i--) {
             self.allData.push(itemData[i])
           }
+          self.allData.shift();//删除数组第一数据
           var end = ((self.step)+1)*self.times;
           var sta  = end - self.step;
           self.items = self.allData.slice(sta,end);
@@ -196,19 +197,13 @@
       },
       infinite() {
         var self = this;
-        // if (this.bottom >= 30) {
-        //   setTimeout(() => {
-        //     this.$refs.my_scroller.finishInfinite(true)
-        //   }, 1500)
-        //   return;
-        // }
         setTimeout(() => {
           self.times +=1;
           var end = ((self.step)+1)*self.times;
           var sta  = end - self.step;
           self.items = self.items.concat(self.allData.slice(sta,end));
-          console.log(self.items.length)
-          if (self.items.length >= 91) {
+          // console.log(self.items.length)
+          if (self.items.length >= self.allData) {
             this.$refs.my_scroller.finishInfinite(true)
           }
           setTimeout(() => {

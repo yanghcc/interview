@@ -46,7 +46,8 @@ module.exports = {
     proxy: {
         '/feed': {
         target: 'http://36kr.com/',
-        changeOrigin: true
+        changeOrigin: true,
+        secure: false
       }
     }
   },
