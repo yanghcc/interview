@@ -132,6 +132,7 @@
   import Scroller from 'vue-scroller'
   import axios from 'axios'
   import moment from 'moment'
+  import X2JS from './assets/xml2json.min.js'
 
   export default {
     components: {
