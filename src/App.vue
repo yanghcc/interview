@@ -129,15 +129,14 @@
   }
 </style>
 <script>
-  import Scroller from 'vue-scroller'
+  // import scroller from 'vue-scroller'
   import axios from 'axios'
   import moment from 'moment'
   import X2JS from './assets/xml2json.min.js'
-
   export default {
-    components: {
-      Scroller
-    },
+    // components: {
+    //   scroller
+    // },
     data() {
       return {
         items: [],
